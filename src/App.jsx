@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard'
 import SideBar from './components/commonComponents/SideBar'
 import UpgradePackage from './components/commonComponents/UpgradePackage'
 import DashHeader from './components/commonComponents/DashHeader'
+import DashboardContents from './components/commonComponents/DashboardContents'
 // import Navbar from './components/Navbar'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/SideBar" element={<SideBar />}/>
           <Route path="/UpgradePackage" element={<UpgradePackage />}/>
           <Route path="/DashHeader" element={<DashHeader />}/>
+          <Route path="/DashboardContents" element={<DashboardContents />}/>
         </Routes>
       </Router>
     </div> 

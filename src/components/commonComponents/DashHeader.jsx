@@ -4,10 +4,21 @@ import styles from '../../generalstyle.module.css'
 import { WiDayFog } from "react-icons/wi";
 import { IoNotificationsOutline, IoPersonOutline } from "react-icons/io5";
 const DashHeader = () => {
+    let curDate = new Date();
+    let curHours = curDate.getHours()
+
+    let greetin;
+    if(curHours <= 12){
+        greetin = "Good Morning"
+    }else if(curHours >12 && curHours <= 17){
+        greetin = "Good Afternoon"
+    }else{
+        greetin = "Good Evening"
+    }
   return (
     <div className={styles.dashHeader}>
         <div>
-            <Text className={styles.greet}>Good Morning <WiDayFog className={styles.leftIconPad2} /></Text>
+            <Text className={styles.greet}>{greetin} <WiDayFog className={styles.leftIconPad2} /></Text>
             <Text as="b" fontSize="xl">Anthony C</Text>
         </div>
         <div className={styles.dashHead2}>
