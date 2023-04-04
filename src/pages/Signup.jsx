@@ -16,7 +16,10 @@ const Signup = () => {
     })
     const {register, handleSubmit, formState: {errors}} = useForm({resolver: yupResolver(schema) });
     const locale = []
+
     const onSubmit = (data)=>{
+        localStorage.getItem("data")
+        
         console.log(data)
         locale.push(data)
         console.log(locale)
@@ -65,6 +68,7 @@ const Signup = () => {
                     </HStack>
                     <Text textAlign="center">Already have an account? <a>login</a></Text>
                     <Input type="submit" bg="#3751e4" color="white" fontSize="md" value="GET STARTED" mt="6" />
+                    <Input type="file" />
                 </form>
             </Box>
 

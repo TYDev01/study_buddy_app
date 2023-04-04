@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
+import SideBar from './components/commonComponents/SideBar'
+import UpgradePackage from './components/commonComponents/UpgradePackage'
+import DashHeader from './components/commonComponents/DashHeader'
 // import Navbar from './components/Navbar'
 
 function App() {
@@ -11,6 +15,10 @@ function App() {
         <Routes>
           <Route path="/Signup" element={<Signup />}/>
           <Route path="/Login" element={<Login />}/>
+          <Route path="/Dashboard" element={<Dashboard />}/>
+          <Route path="/SideBar" element={<SideBar />}/>
+          <Route path="/UpgradePackage" element={<UpgradePackage />}/>
+          <Route path="/DashHeader" element={<DashHeader />}/>
         </Routes>
       </Router>
     </div> 

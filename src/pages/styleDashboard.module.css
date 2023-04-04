@@ -1,0 +1,7 @@
+.myDisplay{
+    display: flex;
+}
+
+.rightSide{
+    flex-grow: 3;
+}
