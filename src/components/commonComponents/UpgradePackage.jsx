@@ -2,7 +2,7 @@ import { Button, Text } from "@chakra-ui/react"
 import styles from '../../generalstyle.module.css'
 import { TbArrowUpCircle } from "react-icons/tb";
 
-const UpgradePackage = () => {
+export const UpgradePackage = () => {
   return (
     <div className={styles.upgradeWhite}>
         <Text as="b" fontSize='lg'>Upgrade to<br></br>Premium Package!</Text>
@@ -15,5 +15,3 @@ const UpgradePackage = () => {
     </div>
   )
 }
-
-export default UpgradePackage

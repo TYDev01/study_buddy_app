@@ -1,8 +1,12 @@
-import { Text, Box, Progress, FormControl, FormLabel, Input, HStack, Textarea } from "@chakra-ui/react"
+import { Text, Box, Progress, FormControl, FormLabel, Input, HStack, Textarea, Button } from "@chakra-ui/react"
 import styles from '../../generalstyle.module.css'
 import { BiDotsHorizontalRounded } from "react-icons/bi";
-import { BsArrowRight, BsPlusCircleDotted } from "react-icons/bs";
-const DashboardContents = () => {
+import { BsArrowRight, BsX } from "react-icons/bs";
+import { ModalsHandler } from "./ModalsHandler";
+import { AddTask } from "./AddTask";
+
+
+export const DashboardContents = () => {
     // const timestamp = 1643200384959;
     const date = new Date()
     const monthName = date.toLocaleString('default', {month: 'long',});
@@ -16,7 +20,7 @@ const DashboardContents = () => {
         <div className={styles.contentFlex}>
             <Box className={styles.taskProgress} maxW="380" height="180" bg="#6f84ff" p="5" borderRadius="15" color="#ffffff">
                 <Text fontSize="2xl" as="b">Study Friday</Text>
-                <Text fontSize="xs" mb="12">Today, January, 13</Text>
+                <Text fontSize="xs" mb="12">Today, {monthName}, {day}</Text>
                 <Text>Task Done: 6/10</Text>
                 <Progress colorScheme="blue" mt="5px" value={60} className={styles.progressBar} />
             </Box>
@@ -50,18 +54,15 @@ const DashboardContents = () => {
                     </div>
                 </div>
             </Box>
-            <Box  bg="#6f84ff" className={styles.dashAddTask}>
-                <Text className={styles.addTaskFlex}>Add new Task <BsPlusCircleDotted  className={styles.leftIconPad}/></Text>
-            </Box>
-        </div>
-
-        <div className={styles.modalStyle}>
-            <Box className={styles.createTaskFlex} mb="33px">
+            <ModalsHandler 
+            content={
+                <div className={styles.modalStyle}>
+            <Box  className={styles.createTaskFlex} mb="33px">
                 <div>
                     <Text as="b" fontSize="3xl">Create Task</Text>
                 </div>
                 <div>
-                    <Text as="b" fontSize="2xl" color="gray.400" className={styles.closeModal}>X</Text>
+                    <ModalsHandler content={<Text as="b" fontSize="2xl" color="gray.400" className={styles.closeModal}><BsX /></Text>} />
                 </div>
             </Box>
             <form>
@@ -86,10 +87,17 @@ const DashboardContents = () => {
                 <FormControl mt="12px">
                     <Textarea placeholder='Here is a sample placeholder' />                                 
                 </FormControl>
+                <Input type="submit" bg='#6f84ff' color="#fff" mt="8" maxW="100%" value="Match me" />
             </form>
         </div>
+            }
+            button={<AddTask />} 
+            />
+            
+        </div>
+
+       
     </div>
   )
 }
 
-export default DashboardContents

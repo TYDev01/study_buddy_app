@@ -150,6 +150,7 @@
     color: #ffffff;
     font-size: 18px;
     text-align: center;
+    background: blue;
 }
 
 .addTaskFlex{
@@ -161,15 +162,19 @@
 
 /* POP FLEX */
 .modalStyle{
-    position: absolute;
-    top: 0;
-    background: #fffbfb;
+    position: fixed;
+    top: 15%;
+    left: 30%;
+    z-index: 999999;
+    background: #ffffff;
     padding: 32px;
-    width: 50%;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
+    /* visibility:hidden; */
+    visibility:visible;
+    width: 40%;
+    /* opacity: 0; */
+    transition: opacity 0.9s;
 }
 
 .modalStyle_call{

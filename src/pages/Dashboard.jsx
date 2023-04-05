@@ -1,9 +1,9 @@
-import DashHeader from '../components/commonComponents/DashHeader'
-import DashboardContents from '../components/commonComponents/DashboardContents'
-import SideBar from '../components/commonComponents/SideBar'
+import {DashHeader} from '../components/commonComponents/DashHeader'
+import {DashboardContents} from '../components/commonComponents/DashboardContents'
+import {SideBar} from '../components/commonComponents/SideBar'
 import styles from './styleDashboard.module.css'
 
-const Dashboard = () => {
+export const Dashboard = () => {
   return (
     <div className={styles.myDisplay}>
         <div >
@@ -16,5 +16,3 @@ const Dashboard = () => {
     </div>
   )
 }
-
-export default Dashboard

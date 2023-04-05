@@ -2,11 +2,11 @@ import { Container, Text } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { HiHome, HiOutlineNewspaper } from "react-icons/hi2";
 import { IoMailOutline, IoPersonOutline } from "react-icons/io5"
-import UpgradePackage from "./UpgradePackage";
+import {UpgradePackage} from "./UpgradePackage";
 import styles from '../../generalstyle.module.css'
 // import { UpgradePackage } from '../commonComponents/UpgradePackage'
 
-const SideBar = () => {
+export const SideBar = () => {
   return (
     <div className={styles.blueBackground}>
        <Link> <HiHome className={styles.fontSpace}/> Home</Link>
@@ -19,5 +19,3 @@ const SideBar = () => {
     
   )
 }
-
-export default SideBar

@@ -3,7 +3,9 @@ import { SearchIcon } from '@chakra-ui/icons'
 import styles from '../../generalstyle.module.css'
 import { WiDayFog } from "react-icons/wi";
 import { IoNotificationsOutline, IoPersonOutline } from "react-icons/io5";
-const DashHeader = () => {
+
+
+export const DashHeader = () => {
     let curDate = new Date();
     let curHours = curDate.getHours()
 
@@ -19,7 +21,7 @@ const DashHeader = () => {
     <div className={styles.dashHeader}>
         <div>
             <Text className={styles.greet}>{greetin} <WiDayFog className={styles.leftIconPad2} /></Text>
-            <Text as="b" fontSize="xl">Anthony C</Text>
+            <Text as="b" fontSize="xl">Ekelebe Stunner!</Text>
         </div>
         <div className={styles.dashHead2}>
             <InputGroup className={styles.dashInput}>
@@ -39,5 +41,3 @@ const DashHeader = () => {
     </div>
   )
 }
-
-export default DashHeader
