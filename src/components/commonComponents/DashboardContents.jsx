@@ -12,22 +12,22 @@ export const DashboardContents = () => {
             i = "0" + i
         }
     }
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
     const date = new Date()
     const monthName = date.toLocaleString('default', {month: 'long',});
-    const day = date.getDate();
-    const currentHour =addZero(date.getHours())
-    const currentMinutes =addZero(date.getMinutes())
-    const currentSeconds = addZero(date.getSeconds())
+    const currentDate = date.getDate();
+    const currentYeat = date.getFullYear();
+    const day = days[date.getDay()];
 
     
   return (
     <div className={styles.DashCont}>
-        <Text as="b" fontSize="3xl">{monthName}, {day},</Text>
+        <Text as="b" fontSize="3xl">{day} {currentDate} {monthName} </Text>
         <Text fontSize="xs">Keep up the good work</Text>
         <div className={styles.contentFlex}>
             <Box className={styles.taskProgress} maxW="380" height="180" bg="#3751E4" p="5" borderRadius="15" color="#ffffff">
                 <Text fontSize="2xl" as="b">Study Friday</Text>
-                <Text fontSize="xs" mb="12">Today, {monthName}, {day}</Text>
+                <Text fontSize="xs" mb="12">{currentDate}, {monthName}, {currentYeat}</Text>
                 <Text>Task Done: 6/10</Text>
                 <Progress colorScheme="blue" mt="5px" value={60} className={styles.progressBar} />
             </Box>
