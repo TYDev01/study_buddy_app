@@ -1,5 +1,5 @@
 .blueBackground{
-    background: #6f84ff;
+    background: #3751E4;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -15,7 +15,7 @@
     font-size: 10px;
     font-weight: 100;
     color: #fff;
-    background: #6f84ff;
+    background: #3751E4;
 }
 
 .fontSize:hover{

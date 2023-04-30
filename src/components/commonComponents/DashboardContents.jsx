@@ -7,18 +7,25 @@ import { AddTask } from "./AddTask";
 
 
 export const DashboardContents = () => {
-    // const timestamp = 1643200384959;
+    function addZero(i){
+        if(i < 10){
+            i = "0" + i
+        }
+    }
     const date = new Date()
     const monthName = date.toLocaleString('default', {month: 'long',});
     const day = date.getDate();
+    const currentHour =addZero(date.getHours())
+    const currentMinutes =addZero(date.getMinutes())
+    const currentSeconds = addZero(date.getSeconds())
 
     
   return (
     <div className={styles.DashCont}>
-        <Text as="b" fontSize="3xl">{monthName}, {day}</Text>
+        <Text as="b" fontSize="3xl">{monthName}, {day},</Text>
         <Text fontSize="xs">Keep up the good work</Text>
         <div className={styles.contentFlex}>
-            <Box className={styles.taskProgress} maxW="380" height="180" bg="#6f84ff" p="5" borderRadius="15" color="#ffffff">
+            <Box className={styles.taskProgress} maxW="380" height="180" bg="#3751E4" p="5" borderRadius="15" color="#ffffff">
                 <Text fontSize="2xl" as="b">Study Friday</Text>
                 <Text fontSize="xs" mb="12">Today, {monthName}, {day}</Text>
                 <Text>Task Done: 6/10</Text>
@@ -67,24 +74,25 @@ export const DashboardContents = () => {
             </Box>
             <form>
                 <FormControl isRequired mb="12px">
-                    <FormLabel color="gray.400">First name</FormLabel>
+                    <FormLabel color="gray.400" fontSize="xs">First name</FormLabel>
                     <Input placeholder='First name' />
                 </FormControl>                                          
                 <FormControl isRequired mb="12px">
-                    <FormLabel color="gray.400">Date</FormLabel>
-                    <Input placeholder="Select Date and Time" size="md" type="date"  />
+                    <FormLabel color="gray.400" fontSize="xs">Date</FormLabel>
+                    <Input placeholder="Select Date" size="md" type="date"  />
                 </FormControl>
                 <HStack mb="12px">
                     <FormControl isRequired>
-                        <FormLabel color="gray.400">Start Time</FormLabel>
-                        <Input placeholder="Select Date and Time" size="md" type="time"  />
+                        <FormLabel color="gray.400" fontSize="xs">Start Time</FormLabel>
+                        <Input placeholder="Time" size="md" type="time"  />
                     </FormControl>
                     <FormControl isRequired>
-                        <FormLabel color="gray.400">End Time</FormLabel>
-                        <Input placeholder="Select Date and Time" size="md" type="time"  />
+                        <FormLabel color="gray.400" fontSize="xs">End Time</FormLabel>
+                        <Input placeholder="Time" size="md" type="time"  />
                     </FormControl>
                 </HStack>
                 <FormControl mt="12px">
+                    <FormLabel color="gray.400" fontSize="xs">Description</FormLabel>
                     <Textarea placeholder='Here is a sample placeholder' />                                 
                 </FormControl>
                 <Input type="submit" bg='#6f84ff' color="#fff" mt="8" maxW="100%" value="Match me" />

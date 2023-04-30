@@ -7,6 +7,7 @@ import {UpgradePackage} from './components/commonComponents/UpgradePackage'
 import {DashHeader} from './components/commonComponents/DashHeader'
 import {ModalsHandler} from './components/commonComponents/ModalsHandler'
 import {DashboardContents} from './components/commonComponents/DashboardContents'
+import { AddedTasks } from './components/commonComponents/AddedTasks'
 // import Navbar from './components/Navbar'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/DashHeader" element={<DashHeader />}/>
           <Route path="/DashboardContents" element={<DashboardContents />}/> 
           <Route path="/ModalsHandler" element={<ModalsHandler />}/> 
+          <Route path="/AddedTasks" element={<AddedTasks />}/> 
         </Routes>
       </Router>
     </div> 
