@@ -33,7 +33,7 @@ export const DashHeader = () => {
     <div className={styles.dashHeader}>
         <div>
             <Text className={styles.greet}>{newClock}<br />{greetin} <WiDayFog className={styles.leftIconPad2} /></Text>
-            <Text as="b" fontSize="xl">Ekelebe Stunner!</Text>
+            <Text as="b" fontSize="xl">Ekelebe Stunner.</Text>
         </div>
         <div className={styles.dashHead2}>
             <InputGroup className={styles.dashInput}>
